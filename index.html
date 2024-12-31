@@ -1,0 +1,125 @@
+<html><head><base href="." target="_blank">
+    <meta charset="UTF-8">
+    <title>Personal Finance Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div id="loginOverlay" class="login-overlay">
+        <div class="login-container">
+            <!-- Login Form -->
+            <div id="loginContainer">
+                <div class="login-header">
+                    <h2>Personal Finance Tracker</h2>
+                    <p>Login to manage your finances</p>
+                </div>
+                <form id="loginForm" class="login-form">
+                    <div class="form-group">
+                        <label for="loginUsername">Username</label>
+                        <input type="text" id="loginUsername" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="loginPassword">Password</label>
+                        <input type="password" id="loginPassword" required>
+                    </div>
+                    <button type="submit">Login</button>
+                    <div id="loginError" class="login-error"></div>
+                </form>
+                <div class="toggle-form" id="showSignup">
+                    Don't have an account? Sign up
+                </div>
+            </div>
+
+            <!-- Signup Form -->
+            <div id="signupContainer" style="display: none;">
+                <div class="login-header">
+                    <h2>Personal Finance Tracker</h2>
+                    <p>Create your account</p>
+                </div>
+                <form id="signupForm" class="login-form">
+                    <div class="form-group">
+                        <label for="signupUsername">Username</label>
+                        <input type="text" id="signupUsername" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signupPassword">Password</label>
+                        <input type="password" id="signupPassword" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm Password</label>
+                        <input type="password" id="confirmPassword" required>
+                    </div>
+                    <button type="submit">Sign Up</button>
+                    <div id="signupError" class="login-error"></div>
+                </form>
+                <div class="toggle-form" id="showLogin">
+                    Already have an account? Login
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="header">
+            <h1>Personal Finance Tracker</h1>
+            <p>Smart financial planning for your future</p>
+            <button id="logoutBtn" class="logout-btn">Logout</button>
+        </div>
+
+        <div class="input-section">
+            <h2>Add New Transaction</h2>
+            <form id="expenseForm" class="grid-form">
+                <div class="form-group">
+                    <label for="transactionType">Transaction Type</label>
+                    <select id="transactionType" required>
+                        <option value="income">Income</option>
+                        <option value="expense">Expense</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="amount">Amount (PKR)</label>
+                    <input type="number" id="amount" required min="0">
+                </div>
+                <div class="form-group">
+                    <label for="category">Category</label>
+                    <select id="category" required>
+                        <option value="income">Income</option>
+                        <option value="food">Food</option>
+                        <option value="utilities">Utilities</option>
+                        <option value="transportation">Transportation</option>
+                        <option value="entertainment">Entertainment</option>
+                        <option value="rent">Rent</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="date">Date</label>
+                    <input type="date" id="date" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Add Transaction</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="summary-card">
+            <h3>Monthly Summary</h3>
+            <div id="summary"></div>
+        </div>
+
+        <div class="charts-container">
+            <div class="chart-wrapper">
+                <canvas id="expenseChart"></canvas>
+            </div>
+            <div class="chart-wrapper">
+                <canvas id="trendChart"></canvas>
+            </div>
+        </div>
+
+        <div class="insights-section">
+            <h2>Smart Insights</h2>
+            <div id="insights"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body></html>
