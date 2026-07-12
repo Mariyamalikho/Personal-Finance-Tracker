@@ -1,3 +1,4 @@
+<img width="720" height="596" alt="Screenshot_20250126-144850~2" src="https://github.com/user-attachments/assets/d7de79a3-a493-43d3-a30c-2c9c7fab2390" />
 # Personal Finance Tracker
 
 A responsive web application that helps users track income, expenses, and financial trends through interactive visualizations.
