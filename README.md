@@ -26,6 +26,7 @@ A responsive web application that helps users track income, expenses, and financ
 - Mobile App
 - Cloud Sync
 - AI Financial Insights
+- Urdu language integration 
 
 ## Author
 Mariyam Ali K.
