@@ -203,3 +203,22 @@ document.getElementById('logoutBtn').addEventListener('click', handleLogout);
 updateCharts();
 updateSummary();
 generateInsights();
+
+// Privacy Modal Logic
+document.querySelectorAll('.openPrivacyBtn').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.getElementById('privacyOverlay').style.display = 'flex';
+    });
+});
+
+document.getElementById('closePrivacyBtn').addEventListener('click', function() {
+    document.getElementById('privacyOverlay').style.display = 'none';
+});
+
+// Close modal if clicking outside of it
+document.getElementById('privacyOverlay').addEventListener('click', function(e) {
+    if (e.target === this) {
+        document.getElementById('privacyOverlay').style.display = 'none';
+    }
+});

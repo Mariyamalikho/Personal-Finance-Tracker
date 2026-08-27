@@ -48,6 +48,7 @@ Designed with simplicity and usability in mind, it offers a clean interface that
 - 💾 Offline Data Storage
 - 📱 Fully Responsive Interface
 - 🌐 Cross-Browser Compatibility
+- 🛡️ Privacy-First Architecture (100% Local Data)
 
 ---
 
